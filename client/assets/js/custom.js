@@ -84,7 +84,6 @@ function checkFbLogin() {
       //console.log('fb Sudah login');
       localStorage.setItem('fbaccesstoken', response.authResponse.accessToken)
       $('#fb-signin-status').empty().append(`Sudah login`)
-      testAPI('dari checkFbLogin')
       FbSignin()
     } else {
       fbLogin()
@@ -93,6 +92,7 @@ function checkFbLogin() {
 }
 
 function fbLogin() {
+
   FB.login((response)=>{
     //console.log('fb login reponse', response);
     if(response.authResponse) {
