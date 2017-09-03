@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ADATodo</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css"> -->
+
+  <!-- require axios -->
+  <script src="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css"></script>
+
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">ADA:ToDo</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><button class="btn btn-danger navbar-btn logout">Logout</button></li>
+        </ul>
+    </div>
+
+  </nav>
+
+
+  <section class="task" id="task">
+    <div class="container">
+      <!-- Example Tables Card -->
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Data Table Example
+        </div>
+        <div class="card-body">
+          <h4><strong>Add new</strong> Task:</h4>
+          <div class="panel-body">
+            <!--  Lgin form-->
+            <form class="form-add-task" action="#" method="post">
+              <div class="form-group">
+                <h5 id="form-add-status" style="display:none"></h5>
+              </div>
+              <div class="form-group">
+                <input type="text" name="add-task" id="add-task" class="form-control input-sm" placeholder="Task description">
+              </div>
+              <input type="submit" value="New Task" class="btn btn-info">
+            </form>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" width="100%" id="data-table" cellspacing="0" width="100%">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Task</th>
+                  <th>Created At</th>
+                  <th>Updated At</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>No</th>
+                  <th>Task</th>
+                  <th>Created At</th>
+                  <th>Updated At</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </tfoot>
+              <tbody id="task-data">
+              </tbody>
+              <!-- <tbody id="task-data">
+                <tr>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>1</td>
+                </tr>
+              </tbody> -->
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto text-center">
+          <h4><strong>Created by Alfan</strong></h4>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/jquery/jquery.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- plugin javascript -->
+  <script src="assets/jquery-easing/jquery.easing.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+
+  <!-- Script for this index -->
+  <script src="assets/js/todo.js"></script>
+</body>
+
+</html>

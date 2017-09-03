@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ADATodo</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css"> -->
+
+    <!-- require axios -->
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+    <script src="assets/axios/axios.min.js"></script>
+
+
+    </script>
+
+    <link rel="stylesheet" href="assets/css/custom.css">
+  </head>
+  <body>
+
+    <header class="header" id="top">
+      <div class="text-vertical-center">
+        <h1>ADA:Todo</h1>
+        <h3>Simple thing before you do something</h3>
+        <br>
+        <a href="#signup" class="btn btn-dark btn-lg js-scroll-trigger">Signup</a>
+        <a href="#signin" class="btn btn-primary btn-lg js-scroll-trigger">Login</a>
+      </div>
+    </header>
+
+
+    <section class="signin" id="signin">
+      <div class="container text-center">
+        <div class="col-lg-5 mx-auto">
+          <h2><strong>Login</strong> Here:</h2>
+          <div class="panel-body">
+            <!--  Lgin form-->
+            <form class="form-signin" action="#" method="post">
+              <div class="form-group">
+                <h3 id="signin-status" style="display:none"></h3>
+              </div>
+              <div class="form-group">
+                <input type="text" name="username" id="signin-username" class="form-control input-sm" placeholder="Username">
+              </div>
+              <div class="form-group">
+                <input type="password" name="password" id="signin-password" class="form-control input-sm" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <div id="captcha"></div>
+              </div>
+              <input type="submit" value="Login" class="btn btn-info">
+              <a href="#top" class="btn btn-danger js-scroll-trigger">Cancel</a>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-5 mx-auto">
+          <br>
+          <h2><strong>Login</strong> Facebook Here</h2>
+          <form class="form-signin-fb" action="#" method="post">
+            <div class="form-group">
+              <h3 id="fb-signin-status" style=""></h3>
+            </div>
+            <div class="form-group">
+              <button onclick="checkFbLogin()" class="btn btn-info" type="button" name="button">FB login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="signup bg-primary text-white" id="signup">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-lg-10 mx-auto">
+            <h2><strong>Register</strong> Here:</h2>
+            <br>
+            <div class="col-lg-6 mx-auto">
+              <div class="panel-body">
+                <h3 id="register-status"></h3>
+                <div class="form-group">
+                  <form class="form-register" action="#" method="post">
+                    <div class="form-group">
+                      <input type="text" name="username" id="register-username" class="form-control input-sm" placeholder="Username" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="password" name="password" id="register-password" class="form-control input-sm" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="email" name="email" id="register-email" class="form-control input-sm" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                      <div id="captchaRegister"></div>
+                    </div>
+                    <input type="submit" value="Register" class="btn btn-dark">
+                    <a href="#top" class="btn btn-danger js-scroll-trigger">Cancel</a>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 mx-auto text-center">
+            <h4><strong>Created by Alfan</strong></h4>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- // require google captcha -->
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+
+    <script src="assets/jquery/jquery.min.js"></script>
+    <script src="assets/popper/popper.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- plugin javascript -->
+    <script src="assets/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Script for this index -->
+    <script src="assets/js/custom.js"></script>
+  </body>
+</html>
